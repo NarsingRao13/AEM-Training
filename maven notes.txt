@@ -1,0 +1,71 @@
+Syntax:
+mvn [options] [<goal(s)>] [<phase(s)>]
+
+
+Important terminologies:
+groupId 		eg:com.techouts
+artfactId 		eg:demoPackage
+version			eg:1
+
+
+lifecycle->phases->goal = plugins
+
+mvn clean dependency:copy-dependencies package
+ [phase/goal][plugin]:[goal]		   [phase]
+
+
+
+	Maven Life Cycles
+Maven has 3 built-in build life cycles and 30 phases
+These are:
+
+clean - will have 3phases
+	pre-clean
+	clean
+	post-clean
+	
+default/build - will have 23 phase
+	validate
+	initilize
+	generate-sources
+	process-sources
+	generate-resources
+	process-resources
+	compile
+	process-classes
+	generate-test-sources
+	process-test-sources
+	generate-test-resources
+	process-test-resources
+	test-compile
+	process-test-classes
+	test
+	prepare-package
+	package
+	pre-integration-test
+	integration-test
+	post-integration-test
+	verify
+	install
+	deploy
+
+site - will have 4 phase
+	pre-site
+	site
+	post-site
+	site-deploy.
+
+
+An archetype is defined as an original pattern or model from which all other things of the same kind are made.
+
+Maven code to create a Web Project
+
+mvn archetype:generate -D groupId="com.techouts" -D artfactId="Web Example1" -D archetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+
+	Maven plugin
+Two types:
+		1.Bulid plugin - executes at time of build. Plugin should be defined in <build> tag
+		2.Reporting plugin
+   
