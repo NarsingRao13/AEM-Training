@@ -1,0 +1,38 @@
+mvn -B archetype:generate "-DarchetypeGroupId=com.adobe.granite.archetypes" "-DarchetypeArtifactId=aem-project-archetype" "-DarchetypeVersion=23" "-DaemVersion=6.5.0" "-DappTitle=SampleAemProject" "-DappId=sampleaemproject" "-DgroupId=com.sampleaemproject" "-DfrontendModule=none" "-DincludeExamples=y" "-DincludeDispatcherConfig=n"
+
+mvn clean install -PautoInstallPackage
+
+
+
+mvn -B archetype:generate \
+-D archetypeGroupId=com.adobe.granite.archetypes \
+-D archetypeArtifactId=aem-project-archetype \
+-D archetypeVersion=23 -D aemVersion=6.5.0 \
+-D appTitle=Second-AEM-Example \
+-D appId=secondaemexample \
+-D groupId=com.secondaemexample \
+-D frontendModule=none \
+-D includeExamples=y \
+-D includeDispatcherConfig=n
+
+
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=22
+
+mvn archetype:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=22 
+
+
+Command to create a project im AEM from  CMD :
+mvn archetype:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=23
+
+To install and deploy:
+
+mvn clean install -PautoInstallPackage
+
+
+To install and deploy core bundle:
+
+mvn clean install -PautoInstallBundle
+
+
+srikanth.k
+NetworkK@123
